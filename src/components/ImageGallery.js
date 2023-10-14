@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import css from './styles.module.css';
 import { getNews } from '../services/getNews';
 import ImageGalleryItem from './ImageGalleryItems';
-// import { Loader } from './Loader';
-// import { Button } from './Button';
+import { Loader } from './Loader';
+import { Button } from './Button';
 
 export default class ImageGallery extends Component {
     state = {
@@ -50,13 +50,13 @@ export default class ImageGallery extends Component {
                         <ImageGalleryItem key={el.id} image={el.webformatURL} pic={el.largeImageURL} />
                     ))}
                 </ul>
-                {/* {searchText && (
+                {searchText && (
                     news.length > 0 ? (
                         <Button handleLoadMore={this.handleLoadMore} />
                     ) : (
                         <Loader />
                     )
-                )} */}
+                )}
             </div>
         );
     }
