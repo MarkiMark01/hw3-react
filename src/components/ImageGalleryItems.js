@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import css from './styles.module.css';
-// import ModalWindow from './Modal/Modal';
+import ModalWindow from './Modal/Modal';
 
 export default class ImageGalleryItem extends Component {
     state = {
@@ -24,14 +24,14 @@ export default class ImageGalleryItem extends Component {
         return (
             <div>
                 <li className={css.ImageGalleryItem} onClick={this.openModal}>
-                    <img src={image} alt='Picture' />
+                    <img src={image} alt='Describe items' />
                 </li>
 
-                {/* {isModalOpen && (
+                {isModalOpen && (
                     <ModalWindow onClose={this.closeModal}>
-                        <img src={pic} alt='Picture' />
+                        <img src={pic} alt='Describe items' />
                     </ModalWindow>
-                )} */}
+                )}
             </div>
         );
     }

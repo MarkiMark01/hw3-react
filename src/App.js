@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-// import ModalWindow from "./components/Modal/Modal";
+import ModalWindow from "./components/Modal/Modal";
 import Searchbar from './components/Searchbar';
 import ImageGallery from './components/ImageGallery';
 
@@ -32,11 +32,11 @@ class App extends Component {
           searchText={this.state.searchText}
           onImageClick={this.setSelectedImageURL}
         />
-        {/* {showModal && (
+        {showModal && (
           <ModalWindow onClose={this.toggleModal} >
-            <img src={selectedImageURL} alt='picture' />
+            <img src={selectedImageURL} alt='Describe items' />
           </ModalWindow>
-        )}; */}
+        )};
       </div>
     );
   }
